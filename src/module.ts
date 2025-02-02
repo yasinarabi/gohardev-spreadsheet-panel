@@ -1,7 +1,7 @@
 import { PanelPlugin } from '@grafana/data';
 import { Options } from './types';
 import { SimplePanel } from './components/SimplePanel';
-import { CellsEditor } from './components/CellsEditor';
+import { CustomCellsEditor } from './components/CustomCellsEditor';
 
 
 export const plugin = new PanelPlugin<Options>(SimplePanel).setPanelOptions((builder) => {
@@ -20,6 +20,6 @@ export const plugin = new PanelPlugin<Options>(SimplePanel).setPanelOptions((bui
       id: 'customCells',
       path: 'customCells',
       name: 'Custom Cells',
-      editor: CellsEditor,
+      editor: CustomCellsEditor,
     });
 });
